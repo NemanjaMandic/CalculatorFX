@@ -22,11 +22,14 @@ public class MainController implements Initializable {
     private Label label;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void processNumbers(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
     }
-    
+    @FXML
+    public void processOperators(ActionEvent event){
+        
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
