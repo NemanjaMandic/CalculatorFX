@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
@@ -19,12 +20,19 @@ import javafx.scene.control.Label;
 public class MainController implements Initializable {
     
     @FXML
-    private Label label;
+    private Label result;
+    private long num1 = 0;
+    private String operator = "";
+    private boolean start = true;
     
     @FXML
     private void processNumbers(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+       if(start){
+           result.setText("");
+           start = false;
+       }
+       String value = ((Button)event.getSource()).getText();
+       result.setText(result.getText() + value);
     }
     @FXML
     public void processOperators(ActionEvent event){
