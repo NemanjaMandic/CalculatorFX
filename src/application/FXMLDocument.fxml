@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import java.lang.*?>
@@ -12,10 +13,13 @@
    <children>
       <StackPane prefHeight="50.0" prefWidth="200.0">
          <children>
-            <Label prefHeight="50.0" prefWidth="402.0">
+            <Label fx:id="result" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="402.0" wrapText="true">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
             </Label>
          </children></StackPane>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="10.0">
